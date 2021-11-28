@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your weight on Mars</title>
+  </head>
+  <body>
+    <h1>Your weight on another planet</h1>
+    <p>On earth you weigh differently than on another planet</p>
+    <script>
+      var user = prompt("Enter your weight: ");
+      var planet = parseInt(
+        prompt("Choose your planet. \n1 it's Mars. 2 is Jupiter.")
+      );
+      var weight = parseFloat(user);
+      var g_earth = 9.8;
+      var g_mars = 3.7;
+      var g_jupiter = 24.8;
+
+      var final_weight;
+      if (planet == 1) {
+        final_weight = (weight * g_mars) / g_earth;
+        final_weight = final_weight.toFixed(2);
+        document.write(
+          "Your weight in Mars is <strong>" +
+            final_weight +
+            " kilograms</strong>"
+        );
+      } else if (planet == 2) {
+        final_weight = (weight * g_jupiter) / g_earth;
+        final_weight = final_weight.toFixed(2);
+        document.write(
+          "Your weight in Jupiter is <strong>" +
+            final_weight +
+            " kilograms</strong>"
+        );
+      } else {
+        final_weight = 10000000000000000000000000000000;
+        final_weight = final_weight.toFixed(2);
+        document.write(
+          "Your weight in Crypton is <strong>" +
+            final_weight +
+            " kilograms. Almost incalculable.</strong>"
+        );
+      }
+    </script>
+  </body>
+</html>
